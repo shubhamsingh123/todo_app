@@ -10,8 +10,8 @@ function App() {
   const [input, setInput] = useState("");
   console.log("Hello", input);
 
-  const addTodo = (e) => {
-    e.preventDefault();
+  const addTodo = (event) => {
+    event.preventDefault();
     setTodos([...todos, input]);
     setInput("");
   };
