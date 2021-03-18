@@ -13,6 +13,7 @@ function App() {
   const addTodo = (e) => {
     e.preventDefault();
     setTodos([...todos, input]);
+    setInput("");
   };
 
   const counting = 1 + 0;
