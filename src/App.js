@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
 function App() {
+  const [todos, setTodos] = useState([
+    "Take dog for a walk",
+    "Take a rubbish out",
+    "Study Time",
+  ]);
+
   const counting = 1 + 0;
   return (
     <div className="app">
@@ -9,9 +15,9 @@ function App() {
       <button>Add TODO</button>
 
       <ul>
-        <li>Take dog for a walk</li>
-        <li>Take a rubbish out</li>
-        <li>Study Time</li>
+        {todos.map((todo) => (
+          <li>todo</li>
+        ))}
       </ul>
     </div>
   );
