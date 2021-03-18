@@ -19,13 +19,16 @@ function App() {
   return (
     <div className="app">
       <h1>TODO: {counting}</h1>
-      <input
-        value={input}
-        onChange={(event) => setInput(event.target.value)}
-        type="text"
-      />
-      <button onClick={addTodo}>Add TODO</button>
-
+      <form>
+        <input
+          value={input}
+          onChange={(event) => setInput(event.target.value)}
+          type="text"
+        />
+        <button type="submit" onClick={addTodo}>
+          Add TODO
+        </button>
+      </form>
       <ul>
         {todos.map((todo) => (
           <li>todo</li>
