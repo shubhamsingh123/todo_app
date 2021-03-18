@@ -8,13 +8,23 @@ function App() {
   ]);
 
   const [input, setInput] = useState("");
+  console.log("Hello", input);
+
+  const addTodo = (e) => {
+    e.preventDefault();
+    setTodos([...todos, input]);
+  };
 
   const counting = 1 + 0;
   return (
     <div className="app">
       <h1>TODO: {counting}</h1>
-      <input value={input} type="text" />
-      <button>Add TODO</button>
+      <input
+        value={input}
+        onChange={(event) => setInput(event.target.value)}
+        type="text"
+      />
+      <button onClick={addTodo}>Add TODO</button>
 
       <ul>
         {todos.map((todo) => (
