@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import React, { useState } from "react";
 
 function App() {
@@ -26,9 +27,14 @@ function App() {
           onChange={(event) => setInput(event.target.value)}
           type="text"
         />
-        <button type="submit" onClick={addTodo}>
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          onClick={addTodo}
+        >
           Add TODO
-        </button>
+        </Button>
       </form>
       <ul>
         {todos.map((todo) => (
