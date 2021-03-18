@@ -7,11 +7,13 @@ function App() {
     "Study Time",
   ]);
 
+  const [input, setInput] = useState("");
+
   const counting = 1 + 0;
   return (
     <div className="app">
       <h1>TODO: {counting}</h1>
-      <input type="text" />
+      <input value={input} type="text" />
       <button>Add TODO</button>
 
       <ul>
