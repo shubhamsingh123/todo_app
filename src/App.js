@@ -22,12 +22,16 @@ function App() {
     <div className="app">
       <h1>TODO: {counting}</h1>
       <form>
-        <input
-          value={input}
-          onChange={(event) => setInput(event.target.value)}
-          type="text"
-        />
+        <FormControl>
+          <InputLabel>Write a Todo</InputLabel>
+          <Input
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+            type="text"
+          />
+        </FormControl>
         <Button
+          disabled={!input}
           variant="contained"
           color="primary"
           type="submit"
